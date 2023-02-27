@@ -6,38 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="main.css" />
     <script src="script.js" defer></script>
-    <title>JP GrineauTo-Do-App</title>
+    <title>JP Grineau To-Do-App</title>
   </head>
   <body>
-    <main>
-      <header class="d-flex title-container">
-        <h1>Today's To Do</h1>
-        <i class="fas fa-sync-alt"></i>
-      </header>
-      <form class="input-container">
-        <input type="text" id="myInput" placeholder="Add to your list..." />
-        <span class="enterArrow" id="arrow">&#8629;</span>
-      </form>
-      <ul class="d-flex todo-lists"></ul>
-      <button class="btn">Clear all Completed</button>
-    </main>
-    <section class="rules">
-      <h2>Rules to use the App</h2>
-      <ol>
-        <li class="rule">
-          Enter Your Task into the Input field and Press Enter
-        </li>
-        <li class="rule">Mark Checked All Completed Tasks via Checkbox</li>
-        <li class="rule">
-          In order to clear All Completed Tasks click button 'Clear All
-          Completed'
-        </li>
-        <li class="rule">
-          In order to delete the Task click on the Task box and next on the
-          Trash Icon
-        </li>
-        <li class="rule">In order to edit click on the Task</li>
-      </ol>
-    </section>
+    <!--Outside container-->
+    <div class="container">
+      <!--Title Container-->
+      <div class="title">
+        <h2>My To Do List</h2>
+      </div>
+
+      <!--text container-->
+      <input
+        type="text"
+        placeholder="e.g Learn new frameworks"
+        name="content"
+        class="text"
+      />
+
+      <!--Personal or Business container-->
+      <div class="category">
+        <h4>Pick a Category</h4>
+        <label>
+          <input type="radio" name="category" id="category1" value="business" />
+          <span class="bubble business"></span>
+          <div>Business</div>
+        </label>
+        <label>
+          <input type="radio" name="category" id="category2" value="personal" />
+          <span class="bubble personal"></span>
+          <div>Personal</div>
+        </label>
+      </div>
+      <!--End of the option list-->
+
+      <!--Submit Button-->
+      <input type="submit" value="Add Item" />
+
+      <!--To Do List-->
+      <div class="todo-list">
+        <h3>TODO List</h3>
+      </div>
+    </div>
+    <!--End of the Container Wrapper-->
   </body>
 </html>
